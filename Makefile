@@ -77,6 +77,8 @@ bootstrap/js/*.js: js/*.js
 	echo "/*!\n* Bootstrap.js by @fat & @mdo\n* Copyright 2012 Twitter, Inc.\n* http://www.apache.org/licenses/LICENSE-2.0.txt\n*/" > bootstrap/js/copyright.js
 	cat bootstrap/js/copyright.js bootstrap/js/bootstrap.min.tmp.js > bootstrap/js/bootstrap.min.js
 	rm bootstrap/js/copyright.js bootstrap/js/bootstrap.min.tmp.js
+	cp bootstrap/js/bootstrap.min.js ../public/js/
+
 
 #
 # CSS COMPLILE
@@ -90,6 +92,7 @@ bootstrap/css/*.css: less/*.less
 	recess --compress ${BOOTSTRAP_LESS} > bootstrap/css/bootstrap.min.css
 	recess --compile ${BOOTSTRAP_RESPONSIVE_LESS} > bootstrap/css/bootstrap-responsive.css
 	recess --compress ${BOOTSTRAP_RESPONSIVE_LESS} > bootstrap/css/bootstrap-responsive.min.css
+	cp bootstrap/css/bootstrap.min.css ../public/css/style.css
 
 #
 # FONTS
