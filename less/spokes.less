@@ -76,7 +76,7 @@ header {
 
             & a {
                 display: block;
-                width: 64px;
+                width: 96px;
                 padding: 8px 16px;
                 color: darken(@sky-blue, 30);
                 text-decoration: none;
@@ -318,4 +318,115 @@ h2 #radius {
 .map {
     width: 100%;
     height: auto;
+}
+
+#where .box {
+  background: rgba(255,255,255,0.5);
+  clear: both;
+}
+
+#bios {
+  a {
+    position: relative;
+    color: #ccc;
+    
+    &:active {
+      top: 1px;
+    }
+  }
+  
+  p {
+    clear: both;
+  }
+}
+
+#slogan {
+  position: absolute;
+  z-index: 1;
+	margin: 132px 0 16px 16px;
+  line-height: 1.25;
+  color: #000;
+  text-shadow: 0px 1px 0px #fff;
+}
+
+
+// hashgrid
+
+
+@grid-width: 980px;
+@cols: 7;
+@gutter: 20px;
+@h-margin: (@gutter - 1px);
+@v-height: 20px;
+
+/**
+ * Grid
+ */
+#grid{
+    /* Dimensions - same width as your grid with gutters */
+    width: @grid-width;
+    z-index: 999;
+    /* Grid (left-aligned)
+    position: absolute;
+    top: 0;
+    left: 0;
+    */
+
+    /* Grid (centered) */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: (-1 * @grid-width/2);
+}
+
+/**
+ * Vertical grid lines
+ *
+ * Set the column width taking the borders into consideration,
+ * and use margins to set column gutters.
+ */
+#grid div.vert{
+    width: (@grid-width/@cols - 1px);
+    border: solid darkturquoise;
+    border-width: 0 1px;
+    margin-right: @h-margin;
+}
+
+#grid div.vert.first-line{
+    margin-left: @h-margin;
+}
+
+
+/**
+ * Horizontal grid lines, defined by your base line height
+ *
+ * Remember, the CSS properties that define the box model:
+ * visible height = height + borders + margins + padding
+ */
+#grid div.horiz{
+    /* 20px line height */
+    height: (@v-height - 1px);
+    border-bottom: 1px dotted darkgray;
+    margin: 0;
+    padding: 0;
+}
+
+/**
+* Classes for multiple grids
+*
+* When using more than one grid, remember to set the numberOfGrids 
+* option in the hashgrid.js file.
+*/
+#grid.grid-1 div.vert{
+    /* Vertical grid line colour for grid 1 */
+    border-color: darkturquoise;
+}
+#grid.grid-2{
+    /* Adjustments */
+    padding: 0 160px;
+    width: 660px;
+}
+#grid.grid-2 div.vert{
+    /* Vertical grid line colour for grid 2 */
+    border-color: crimson;
 }
