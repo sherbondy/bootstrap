@@ -1,3 +1,84 @@
+// hashgrid
+
+@grid-width: 980px;
+@cols: 7;
+@gutter: 20px;
+@h-margin: (@gutter - 1px);
+@v-height: 20px;
+
+/**
+ * Grid
+ */
+#grid {
+  /* Dimensions - same width as your grid with gutters */
+  width: @grid-width;
+  z-index: 999;
+  /* Grid (left-aligned)
+  position: absolute;
+  top: 0;
+  left: 0;
+  */
+
+  /* Grid (centered) */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: (-1 * @grid-width/2);
+
+  /**
+   * Vertical grid lines
+   *
+   * Set the column width taking the borders into consideration,
+   * and use margins to set column gutters.
+   */
+  div.vert {
+    width: (@grid-width/@cols - 1px);
+    border: solid darkturquoise;
+    border-width: 0 1px;
+    margin-right: @h-margin;
+  }
+  
+  div.vert.first-line {
+    margin-left: @h-margin;
+  }
+  
+  /**
+   * Horizontal grid lines, defined by your base line height
+   *
+   * Remember, the CSS properties that define the box model:
+   * visible height = height + borders + margins + padding
+   */
+  div.horiz {
+    /* 20px line height */
+    height: (@v-height - 1px);
+    border-bottom: 1px dotted darkgray;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /**
+  * Classes for multiple grids
+  *
+  * When using more than one grid, remember to set the numberOfGrids 
+  * option in the hashgrid.js file.
+  */
+  &.grid-1 div.vert {
+      /* Vertical grid line colour for grid 1 */
+      border-color: darkturquoise;
+  }
+  &.grid-2 {
+    /* Adjustments */
+    padding: 0 160px;
+    width: 660px;
+  
+    div.vert{
+        /* Vertical grid line colour for grid 2 */
+        border-color: crimson;
+    }
+  }
+}
+
+
 //@import "cloud";
 
 body, #who {
@@ -119,7 +200,13 @@ header {
 
     #who, #what, #when, #where, #why, #how {
         overflow: hidden;
-        padding: 16px 16px 32px;
+    
+        .content {
+          max-width: 980px;
+          margin: 0 auto;
+          overflow: hidden;
+          padding: 0 20px 20px 20px;
+        }
     }
     #who, #when, #why {
         color: #fff;
@@ -149,91 +236,92 @@ header {
     }
 }
 
-@box-length: 96px;
+@box-length: 116px;
 
 #who h3 small {
     display: block;
-    margin-top: 12px;
+    margin-top: 8px;
     color: #ccc;
 }
 
 #team {
-    list-style: none;
-    overflow: hidden;
-    max-width: (3 * @box-length);
+  list-style: none;
+  overflow: hidden;
+  margin: 0px;
 
-    li {
-        background: #000;
-    }
-    
-    li, li > a, li > a img {
+  li {
+    background: #000;
+  }
+  
+  li, li > a, li > a img {
+    display: block;
+    float: left;
+    width: @box-length;
+    height: @box-length;
+  }
+
+  li > a {
+    &:hover, &.active {
+      h5 {
+        margin: 0px;
         display: block;
-        float: left;
-        width: @box-length;
-        height: @box-length;
+        margin-right: 16px;
+      }
+      
+      img {
+        opacity: 1.0;
+      }
     }
 
-    li > a {
-
-        &:hover, &.active {
-            h5 {
-                margin: 0px;
-                display: block;
-            }
-            img {
-                opacity: 1.0;
-            }
-        }
-
-        h5 {
-            z-index: 2;
-            display: none;
-            position: absolute;
-            width: @box-length;
-            text-align: center;
-            background: rgba(0,0,0,0.75);
-            color: #fff;
-        }
-
-        img {
-            position: absolute;
-            opacity: 0.75;
-        }
+    h5 {
+      z-index: 2;
+      display: none;
+      position: absolute;
+      width: @box-length;
+      text-align: center;
+      background: rgba(0,0,0,0.75);
+      color: #fff;
     }
+
+    img {
+      position: absolute;
+      opacity: 0.75;
+    }
+  }
 }
 
 #bike {
-    display: block;
-    clear: both;
-    margin: 0px auto;
+  display: block;
+  clear: both;
+  margin: 0px auto;
 }
 
 div.month {
-    margin-right: @grid-gutter-width;
+  margin-right: @grid-gutter-width;
 
-    table.calendar {
-        display: block;
-        margin: 0px;
-        color: #000;
-        text-shadow: none;
-        background: #fff url('/img/lightpaperfibers.png');
+  table.calendar {
+    display: block;
+    margin: 0px;
+    color: #000;
+    text-shadow: none;
+    background: #fff url('/img/lightpaperfibers.png');
 
-        thead {
-            font-weight: bold;
-            background: rgba(200,200,200,0.5);
-        }
-
-        td {
-            text-align: center;
-            width: 32px;
-            height: 32px;
-            border: 1px solid #ccc;
-
-            &.trip {
-                background: rgba(0, 100, 0, 0.5);
-            }
-        }
+    thead {
+      font-weight: bold;
+      background: rgba(200,200,200,0.5);
     }
+
+    td {
+      text-align: center;
+      width: 32px;
+      height: 32px;
+      border: 1px solid #ccc;
+
+      &.trip {
+        background: rgba(0, 100, 0, 0.5);
+      }
+    }
+  }
 }
 
 
@@ -244,80 +332,80 @@ div.month {
 @map-width: 720px + 2*32px;
 
 #map {
-    top: 0;
-    left: 50%;
-    position: absolute;
-    margin: 0 0 0 (-1*@map-width/2);
-    width: @map-width;
-    height: @header-height;
+  top: 0;
+  left: 50%;
+  position: absolute;
+  margin: 0 0 0 (-1*@map-width/2);
+  width: @map-width;
+  height: @header-height;
 }
 
 #trails, #symbols {
-    position: absolute;
-    top: 16px;
-    width: 180px;
-    background: rgba(255,255,255,0.5);
-    padding: 8px;
+  position: absolute;
+  top: 16px;
+  width: 180px;
+  background: rgba(255,255,255,0.5);
+  padding: 8px;
 
-    .toggle {
-        display: block;
-        position: relative;
-        background: #fff;
-        color: #000;
-        text-decoration: none;
-        padding: 4px 8px;
-        text-align: center;
+  .toggle {
+    display: block;
+    position: relative;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    padding: 4px 8px;
+    text-align: center;
 
-        &:hover {
-            background: #000;
-            color: #fff;
-        }
-        &:active {
-            top: 1px;
-        }
+    &:hover {
+      background: #000;
+      color: #fff;
+    }
+    &:active {
+      top: 1px;
+    }
+  }
+
+  & > div {
+    overflow: hidden;
+
+    &:hover {
+      background: #fff;
+    }
+    
+    input, label, a {
+      padding: 4px;
     }
 
-    & > div {
-        overflow: hidden;
-
-        &:hover {
-            background: #fff;
-        }
-        
-        input, label, a {
-            padding: 4px;
-        }
-
-        input[type="checkbox"] {
-            margin: 10px 8px 0 0;
-            float: right;
-        }
-
-        label {
-            float: left;
-            width: 140px;
-        }
+    input[type="checkbox"] {
+      margin: 10px 8px 0 0;
+      float: right;
     }
+
+    label {
+      float: left;
+      width: 140px;
+    }
+  }
 }
 
 #trails {
-    left: 16px;
+  left: 16px;
 }
 
 #symbols {
-    right: 16px;
+  right: 16px;
 }
 
 h2 #radius {
-    font-size: inherit;
-    font-family: mono;
-    width: 2em;
-    text-align: center;
+  font-size: inherit;
+  font-family: mono;
+  width: 2em;
+  text-align: center;
 }
 
 .map {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 #where .box {
@@ -347,86 +435,4 @@ h2 #radius {
   line-height: 1.25;
   color: #000;
   text-shadow: 0px 1px 0px #fff;
-}
-
-
-// hashgrid
-
-
-@grid-width: 980px;
-@cols: 7;
-@gutter: 20px;
-@h-margin: (@gutter - 1px);
-@v-height: 20px;
-
-/**
- * Grid
- */
-#grid{
-    /* Dimensions - same width as your grid with gutters */
-    width: @grid-width;
-    z-index: 999;
-    /* Grid (left-aligned)
-    position: absolute;
-    top: 0;
-    left: 0;
-    */
-
-    /* Grid (centered) */
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: (-1 * @grid-width/2);
-}
-
-/**
- * Vertical grid lines
- *
- * Set the column width taking the borders into consideration,
- * and use margins to set column gutters.
- */
-#grid div.vert{
-    width: (@grid-width/@cols - 1px);
-    border: solid darkturquoise;
-    border-width: 0 1px;
-    margin-right: @h-margin;
-}
-
-#grid div.vert.first-line{
-    margin-left: @h-margin;
-}
-
-
-/**
- * Horizontal grid lines, defined by your base line height
- *
- * Remember, the CSS properties that define the box model:
- * visible height = height + borders + margins + padding
- */
-#grid div.horiz{
-    /* 20px line height */
-    height: (@v-height - 1px);
-    border-bottom: 1px dotted darkgray;
-    margin: 0;
-    padding: 0;
-}
-
-/**
-* Classes for multiple grids
-*
-* When using more than one grid, remember to set the numberOfGrids 
-* option in the hashgrid.js file.
-*/
-#grid.grid-1 div.vert{
-    /* Vertical grid line colour for grid 1 */
-    border-color: darkturquoise;
-}
-#grid.grid-2{
-    /* Adjustments */
-    padding: 0 160px;
-    width: 660px;
-}
-#grid.grid-2 div.vert{
-    /* Vertical grid line colour for grid 2 */
-    border-color: crimson;
 }

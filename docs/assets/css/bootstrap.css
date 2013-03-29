@@ -298,8 +298,8 @@ button,
 select,
 textarea {
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-size: 20px;
+  font-size: 2rem;
   line-height: 24px;
 }
 
@@ -341,8 +341,8 @@ p {
 
 .lead {
   margin-bottom: 24px;
-  font-size: 27px;
-  font-size: 2.7rem;
+  font-size: 30px;
+  font-size: 3rem;
   font-weight: 200;
   line-height: 1.25;
 }
@@ -424,7 +424,7 @@ h6,
 .h5,
 .h6 {
   font-family: Signika, "Gill Sans", Verdana, sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 24px;
   text-rendering: optimizelegibility;
 }
@@ -467,58 +467,58 @@ h6 {
 
 h1,
 .h1 {
-  font-size: 49.5;
+  font-size: 55;
   font-size: 4rem;
 }
 
 h2,
 .h2 {
-  font-size: 40.5;
+  font-size: 45;
   font-size: 3rem;
 }
 
 h3,
 .h3 {
-  font-size: 31.5;
+  font-size: 35;
   font-size: 2.5rem;
 }
 
 h4,
 .h4 {
-  font-size: 22.5;
+  font-size: 25;
   font-size: 2rem;
 }
 
 h5,
 .h5 {
-  font-size: 18;
+  font-size: 20;
   font-size: 1.6rem;
 }
 
 h6,
 .h6 {
-  font-size: 15.299999999999999;
+  font-size: 17;
   font-size: 1.2rem;
 }
 
 h1 small,
 .h1 small {
-  font-size: 31.5;
+  font-size: 35;
 }
 
 h2 small,
 .h2 small {
-  font-size: 22.5;
+  font-size: 25;
 }
 
 h3 small,
 .h3 small {
-  font-size: 18;
+  font-size: 20;
 }
 
 h4 small,
 .h4 small {
-  font-size: 18;
+  font-size: 20;
 }
 
 .page-header {
@@ -624,7 +624,7 @@ blockquote {
 
 blockquote p {
   margin-bottom: 0;
-  font-size: 22.5;
+  font-size: 25;
   font-weight: 300;
   line-height: 1.25;
 }
@@ -678,7 +678,7 @@ code,
 pre {
   padding: 0 3px 2px;
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-  font-size: 16;
+  font-size: 18;
   color: #333333;
   border-radius: 4px;
 }
@@ -695,7 +695,7 @@ pre {
   display: block;
   padding: 11.5px;
   margin: 0 0 12px;
-  font-size: 17;
+  font-size: 19;
   line-height: 24px;
   word-break: break-all;
   word-wrap: break-word;
@@ -1127,7 +1127,7 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: 24px;
-  font-size: 27;
+  font-size: 30;
   line-height: 48px;
   color: #333333;
   border: 0;
@@ -1159,7 +1159,7 @@ input[type="color"] {
   display: inline-block;
   min-height: 38px;
   padding: 6px 9px;
-  font-size: 18;
+  font-size: 20;
   line-height: 24px;
   color: #555555;
   vertical-align: middle;
@@ -1335,7 +1335,7 @@ input[type="search"].input-large,
 input[type="tel"].input-large,
 input[type="color"].input-large {
   padding: 11px 14px;
-  font-size: 22.5;
+  font-size: 25;
   border-radius: 6px;
 }
 
@@ -1357,7 +1357,7 @@ input[type="tel"].input-small,
 input[type="color"].input-small {
   min-height: 30px;
   padding: 2px 10px;
-  font-size: 15.299999999999999;
+  font-size: 17;
   border-radius: 3px;
 }
 
@@ -1544,7 +1544,7 @@ select:focus:invalid:focus {
 
 .input-group-addon {
   padding: 6px 8px;
-  font-size: 18;
+  font-size: 20;
   font-weight: normal;
   line-height: 24px;
   text-align: center;
@@ -1558,12 +1558,12 @@ select:focus:invalid:focus {
 
 .input-group-addon.input-small {
   padding: 2px 10px;
-  font-size: 15.299999999999999;
+  font-size: 17;
 }
 
 .input-group-addon.input-large {
   padding: 11px 14px;
-  font-size: 22.5;
+  font-size: 25;
 }
 
 .input-group input:first-child,
@@ -1699,7 +1699,7 @@ select:focus:invalid:focus {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 18;
+  font-size: 20;
   font-weight: 500;
   line-height: 24px;
   text-align: center;
@@ -1743,19 +1743,19 @@ fieldset[disabled] .btn {
 
 .btn-large {
   padding: 11px 14px;
-  font-size: 22.5;
+  font-size: 25;
   border-radius: 6px;
 }
 
 .btn-small {
   padding: 2px 10px;
-  font-size: 15.299999999999999;
+  font-size: 17;
   border-radius: 3px;
 }
 
 .btn-mini {
   padding: 0 6px;
-  font-size: 13.5;
+  font-size: 15;
   border-radius: 3px;
 }
 
@@ -3797,7 +3797,7 @@ button.close {
 .pagination-large > li > a,
 .pagination-large > li > span {
   padding: 11px 14px;
-  font-size: 22.5;
+  font-size: 25;
 }
 
 .pagination-large > li:first-child > a,
@@ -3831,13 +3831,13 @@ button.close {
 .pagination-small > li > a,
 .pagination-small > li > span {
   padding: 2px 10px;
-  font-size: 15.299999999999999;
+  font-size: 17;
 }
 
 .pagination-mini > li > a,
 .pagination-mini > li > span {
   padding: 0 6px;
-  font-size: 13.5;
+  font-size: 15;
 }
 
 .pager {
@@ -5015,6 +5015,54 @@ a.badge:focus {
   }
 }
 
+/**
+ * Grid
+ */
+
+#grid {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 999;
+  width: 980px;
+  margin-left: -490px;
+}
+
+#grid div.vert {
+  width: 139px;
+  margin-right: 19px;
+  border: solid darkturquoise;
+  border-width: 0 1px;
+}
+
+#grid div.vert.first-line {
+  margin-left: 19px;
+}
+
+#grid div.horiz {
+  height: 19px;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px dotted darkgray;
+}
+
+#grid.grid-1 div.vert {
+  /* Vertical grid line colour for grid 1 */
+
+  border-color: darkturquoise;
+}
+
+#grid.grid-2 {
+  width: 660px;
+  padding: 0 160px;
+}
+
+#grid.grid-2 div.vert {
+  /* Vertical grid line colour for grid 2 */
+
+  border-color: crimson;
+}
+
 body,
 #who {
   background: #1D7A20;
@@ -5092,7 +5140,7 @@ header #logo canvas {
 
 #questions li h4 a {
   display: block;
-  width: 64px;
+  width: 96px;
   padding: 8px 16px;
   color: #346ad6;
   text-align: right;
@@ -5132,7 +5180,18 @@ header #logo canvas {
 #content #where,
 #content #why,
 #content #how {
-  padding: 16px 16px 32px;
+  overflow: hidden;
+}
+
+#content #who .content,
+#content #what .content,
+#content #when .content,
+#content #where .content,
+#content #why .content,
+#content #how .content {
+  max-width: 980px;
+  padding: 0 20px 20px 20px;
+  margin: 0 auto;
   overflow: hidden;
 }
 
@@ -5172,12 +5231,12 @@ header #logo canvas {
 
 #who h3 small {
   display: block;
-  margin-top: 12px;
+  margin-top: 8px;
   color: #ccc;
 }
 
 #team {
-  max-width: 288px;
+  margin: 0;
   overflow: hidden;
   list-style: none;
 }
@@ -5191,14 +5250,15 @@ header #logo canvas {
 #team li > a img {
   display: block;
   float: left;
-  width: 96px;
-  height: 96px;
+  width: 116px;
+  height: 116px;
 }
 
 #team li > a:hover h5,
 #team li > a.active h5 {
   display: block;
   margin: 0;
+  margin-right: 16px;
 }
 
 #team li > a:hover img,
@@ -5210,7 +5270,7 @@ header #logo canvas {
   position: absolute;
   z-index: 2;
   display: none;
-  width: 96px;
+  width: 116px;
   color: #fff;
   text-align: center;
   background: rgba(0, 0, 0, 0.75);
@@ -5344,4 +5404,31 @@ h2 #radius {
 .map {
   width: 100%;
   height: auto;
+}
+
+#where .box {
+  clear: both;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#bios a {
+  position: relative;
+  color: #ccc;
+}
+
+#bios a:active {
+  top: 1px;
+}
+
+#bios p {
+  clear: both;
+}
+
+#slogan {
+  position: absolute;
+  z-index: 1;
+  margin: 132px 0 16px 16px;
+  line-height: 1.25;
+  color: #000;
+  text-shadow: 0px 1px 0px #fff;
 }
