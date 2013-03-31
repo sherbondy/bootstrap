@@ -311,7 +311,7 @@ input[type="checkbox"] {
 }
 // Error
 .has-error {
-  .formFieldState(@state-error-text, @state-error-text, @state-error-background);
+  .formFieldState(@state-danger-text, @state-danger-text, @state-danger-background);
 }
 // Success
 .has-success {
@@ -343,7 +343,7 @@ select:focus:invalid {
   margin-bottom: @line-height-base;
   background-color: @form-actions-background;
   border-top: 1px solid #e5e5e5;
-  .clear_float(); // Adding clearfix to allow for .pull-right button containers
+  .clearfix(); // Adding clearfix to allow for .pull-right button containers
 }
 
 
@@ -517,7 +517,7 @@ select:focus:invalid {
     .control-group {
       position: relative;
       margin-bottom: @line-height-base;
-      .clear_float();
+      .clearfix();
 
       input,
       select,
@@ -537,6 +537,11 @@ select:focus:invalid {
     // Move over all input controls and content over
     .control-group > .controls {
       margin-left: @component-offset-horizontal;
+    }
+
+    // Make sure form actions buttons are aligned with controls
+    .form-actions {
+      padding-left: @component-offset-horizontal;
     }
 
   }

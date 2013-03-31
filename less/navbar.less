@@ -9,7 +9,7 @@
   background-color: @navbar-bg;
   border-radius: @border-radius-base;
   // Prevent floats from breaking the navbar
-  .clear_float();
+  .clearfix();
 }
 
 // Navbar nav links
@@ -283,7 +283,7 @@
   .navbar .nav {
     float: left;
     margin-top: 0; // undo top margin to make nav extend full height of navbar
-    .clear_float();
+    .clearfix();
 
     &.pull-right {
       float: right;
@@ -305,6 +305,16 @@
   // Since we override the border, we need to specify it again for inverted navbars
   .navbar-inverse .nav > .divider {
     border-right-color: lighten(@navbar-inverse-bg, 5%);
+  }
+
+  .navbar-fixed-left {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar-fixed-left .navbar-brand,
+  .navbar-fixed-left .nav,
+  .navbar-fixed-left .nav > li {
+    float: none;
   }
 
   // Required to make the collapsing navbar work on regular desktops

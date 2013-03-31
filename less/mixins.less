@@ -16,7 +16,7 @@
 //    that are clearfixed.
 // 2. The use of `table` rather than `block` is only necessary if using
 //    `:before` to contain the top-margins of child elements.
-.clear_float() {
+.clearfix() {
   &:before,
   &:after {
     content: " "; /* 1 */
@@ -283,7 +283,7 @@
     background-image: -o-linear-gradient(left, @startColor, @midColor @colorStop, @endColor);
     background-image: linear-gradient(to right, @startColor, @midColor @colorStop, @endColor);
     background-repeat: no-repeat;
-    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down, gets no color-stop at all for proper fallback
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@startColor),argb(@endColor))); // IE9 and down, gets no color-stop at all for proper fallback
   }
 
   .vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
@@ -400,7 +400,7 @@
 .container-fixed() {
   margin-right: auto;
   margin-left: auto;
-  .clear_float();
+  .clearfix();
 }
 
 // Make a grid
@@ -411,7 +411,7 @@
   margin-left:  (@grid-gutter-width / -2);
   margin-right: (@grid-gutter-width / -2);
   // Then clear the floated columns
-  .clear_float();
+  .clearfix();
 }
 // Generate the columns
 .make-column(@columns) {
@@ -449,52 +449,52 @@
 .generate-grid-columns(@grid-columns) {
 
   // Default columns
-  .spanX (@index) when (@index > 0) {
-    .span@{index} { .span(@index); }
-    .spanX((@index - 1));
+  .col-span-X (@index) when (@index > 0) {
+    .col-span-@{index} { .col-span-(@index); }
+    .col-span-X((@index - 1));
   }
-  .spanX(0) {}
+  .col-span-X(0) {}
 
   // Offsets (gaps between columns)
-  .offsetX (@index) when (@index > 0) {
-    .offset@{index} { .offset(@index); }
-    .offsetX((@index - 1));
+  .col-offset-X (@index) when (@index > 0) {
+    .col-offset-@{index} { .col-offset-(@index); }
+    .col-offset-X((@index - 1));
   }
-  .offsetX (0) {}
+  .col-offset-X (0) {}
 
   // Source ordering
-  .pushX (@index) when (@index > 0) {
-    .push@{index} { .push(@index); }
-    .pushX((@index - 1));
+  .col-push-X (@index) when (@index > 0) {
+    .col-push-@{index} { .col-push-(@index); }
+    .col-push-X((@index - 1));
   }
-  .pushX (0) {}
+  .col-push-X (0) {}
 
   // Source ordering
-  .pullX (@index) when (@index > 0) {
-    .pull@{index} { .pull(@index); }
-    .pullX((@index - 1));
+  .col-pull-X (@index) when (@index > 0) {
+    .col-pull-@{index} { .col-pull-(@index); }
+    .col-pull-X((@index - 1));
   }
-  .pullX (0) {}
+  .col-pull-X (0) {}
 
   // Apply the styles
-  .span(@columns) {
+  .col-span-(@columns) {
     width: percentage((@columns / @grid-columns));
   }
-  .offset(@columns) {
+  .col-offset-(@columns) {
     margin-left: percentage((@columns / @grid-columns));
   }
-  .push(@columns) {
+  .col-push-(@columns) {
     left: percentage((@columns / @grid-columns));
   }
-  .pull(@columns) {
+  .col-pull-(@columns) {
     right: percentage((@columns / @grid-columns));
   }
 
   // Generate .spanX and .offsetX
-  .spanX(@grid-columns);
-  .offsetX(@grid-columns);
-  .pushX(@grid-columns);
-  .pullX(@grid-columns);
+  .col-span-X(@grid-columns);
+  .col-offset-X(@grid-columns);
+  .col-push-X(@grid-columns);
+  .col-pull-X(@grid-columns);
 }
 
 
