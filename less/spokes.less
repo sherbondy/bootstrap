@@ -236,7 +236,7 @@ header {
     }
 }
 
-@box-length: 116px;
+@box-length: (940px/8);
 
 #who h3 small {
     display: block;
@@ -257,15 +257,17 @@ header {
     display: block;
     float: left;
     width: @box-length;
-    height: @box-length;
   }
 
   li > a {
     &:hover, &.active {
+      text-decoration: none;
+      
       h5 {
-        margin: 0px;
         display: block;
-        margin-right: 16px;
+        background: #fff;
+        color: #000;
+        text-shadow: none;
       }
       
       img {
@@ -274,18 +276,16 @@ header {
     }
 
     h5 {
-      z-index: 2;
-      display: none;
-      position: absolute;
+      margin: 0px;
+      line-height: 2;
       width: @box-length;
       text-align: center;
-      background: rgba(0,0,0,0.75);
       color: #fff;
     }
 
     img {
-      position: absolute;
-      opacity: 0.75;
+      opacity: 0.5;
+      height: @box-length;
     }
   }
 }
