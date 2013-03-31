@@ -136,45 +136,51 @@ header {
     }
 }
 
-#questions {
+@nav-border-rad: 16px;
+
+.navbar {
+  background: none;
+}
+
+#navigation {
+  ul {
     position: fixed;
     z-index: 2;
     top: 16px;
     right: 16px;
     list-style: none;
     background: rgba(255,255,255,0.85);
-    border-radius: 16px;
-    font-size: 24px;
-
+    border-radius: @nav-border-rad;
+    
     li {
+      display: block;
+      
+      a {
         display: block;
-    }
-
-    li {
-        & h4 {
-            z-index: 2;
-            margin: 0px;
-
-            & a {
-                display: block;
-                width: 96px;
-                padding: 8px 16px;
-                color: darken(@sky-blue, 30);
-                text-decoration: none;
-                text-align: right;
-                
-                &:hover {
-                    color: darken(@sky-blue, 50);
-
-
-
-                }
-                &:active {
-                    top: 1px;
-                }
-            }
+        width: 96px;
+        padding: 8px 16px;
+        color: darken(@sky-blue, 30);
+        text-decoration: none;
+        border: none;
+        
+        &:hover {
+          color: darken(@sky-blue, 50);
         }
+      
+        &:active {
+          top: 1px;
+        }
+      }
+      
+      &:first-child a {
+        border-radius: @nav-border-rad @nav-border-rad 0 0;
+      }
+      
+      &:last-child a {
+        border-radius: 0 0 @nav-border-rad @nav-border-rad;
+      }
     }
+  }
 }
 
 
