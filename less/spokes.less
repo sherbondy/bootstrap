@@ -95,7 +95,7 @@ body, #who {
     font-weight: bold;
 }
 
-@header-height: 360px;
+@header-height: 320px;
 @sky-blue: rgb(180,200,240);
 @map-height: 320px;
 
@@ -167,6 +167,7 @@ header {
         
         &:hover {
           color: darken(@sky-blue, 50);
+          background: #efefef;
         }
       
         &:active {
@@ -198,7 +199,7 @@ header {
   margin-top: @header-height;
   background: rgba(0, 100, 0, 0.85);
 
-  h2 {
+  h3 {
     & em {
       font-style: normal;
       color: #333;
@@ -254,8 +255,8 @@ header {
     h3 {
       small {
         display: block;
-        margin-top: 8px;
-        color: #ccc;
+        margin-top: 20px;
+        color: #efefef;
       }
     }
   }
@@ -470,4 +471,14 @@ h2 #radius {
   line-height: 1.25;
   color: #fff;
   text-shadow: 0px 1px 4px #000;
+}
+
+.carousel {
+  .item {
+    background: #000;
+    
+    img {
+      margin: 0 auto;
+    }
+  }
 }
