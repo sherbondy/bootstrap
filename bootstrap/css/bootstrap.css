@@ -6633,10 +6633,19 @@ h2 #radius {
   color: #fff;
 }
 
+#courses .carousel .item .image {
+  width: 980px;
+  height: 735px;
+}
+
 .carousel .item {
   background: #000;
 }
 
-.carousel .item img {
+.carousel .item .carousel-caption {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.carousel .item .image {
   margin: 0 auto;
 }

@@ -475,13 +475,22 @@ h2 #radius {
 
 #courses {
   color: #fff;
+  
+  .carousel .item .image {
+    width: @grid-width;
+    height: (@grid-width * (3/4));
+  }
 }
 
 .carousel {
   .item {
     background: #000;
     
-    img {
+    .carousel-caption {
+      background: rgba(0,0,0,0.9);
+    }
+    
+    .image {
       margin: 0 auto;
     }
   }
