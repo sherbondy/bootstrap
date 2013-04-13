@@ -6451,7 +6451,7 @@ header #logo canvas {
 #team li > a img {
   display: block;
   float: left;
-  width: 117.5px;
+  width: 108.88888888888889px;
 }
 
 #team li > a:hover,
@@ -6473,7 +6473,7 @@ header #logo canvas {
 }
 
 #team li > a h5 {
-  width: 117.5px;
+  width: 108.88888888888889px;
   margin: 0;
   line-height: 2;
   color: #fff;
@@ -6481,7 +6481,7 @@ header #logo canvas {
 }
 
 #team li > a img {
-  height: 117.5px;
+  height: 108.88888888888889px;
   opacity: 0.5;
 }
 
@@ -6627,6 +6627,10 @@ h2 #radius {
   line-height: 1.25;
   color: #fff;
   text-shadow: 0px 1px 4px #000;
+}
+
+#courses {
+  color: #fff;
 }
 
 .carousel .item {
