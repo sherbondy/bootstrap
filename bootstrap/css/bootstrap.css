@@ -6635,7 +6635,7 @@ h2 #radius {
 
 #courses .carousel .item .image {
   width: 980px;
-  height: 735px;
+  height: 551.25px;
 }
 
 .carousel .item {
@@ -6648,4 +6648,16 @@ h2 #radius {
 
 .carousel .item .image {
   margin: 0 auto;
+}
+
+#app {
+  position: absolute;
+  left: 50%;
+  z-index: 3;
+  display: block;
+  width: 640px;
+  height: 100%;
+  margin-left: -320px;
+  border: none;
+  box-shadow: 0px 0px 16px #000;
 }
