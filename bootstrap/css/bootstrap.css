@@ -6386,6 +6386,13 @@ header #logo canvas {
   text-shadow: 0px 1px 0px #000;
 }
 
+#content #who h3 em,
+#content #when h3 em,
+#content #why h3 em {
+  color: #ccc;
+  text-shadow: 0px 1px 0px #000;
+}
+
 #content #what,
 #content #where,
 #content #how {
