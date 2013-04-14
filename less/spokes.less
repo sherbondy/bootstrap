@@ -256,12 +256,10 @@ header {
   }
 
   #who {
-    h3 {
-      small {
-        display: block;
-        margin-top: 20px;
-        color: #efefef;
-      }
+    h4 small {
+      display: block;
+      margin-top: 4px;
+      color: #efefef;
     }
   }
   #what {
@@ -344,6 +342,7 @@ header {
 }
 
 div.month {
+  margin-bottom: 20px;
 
   table.calendar {
     display: block;
@@ -385,6 +384,8 @@ div.month {
   position: absolute;
   width: 100%;
   height: 320px;
+  top: 0px;
+  left: 0px;
 }
 
 #trails, #symbols {
@@ -456,9 +457,15 @@ h2 #radius {
   position: absolute;
 }
 
-#where .box {
-  background: rgba(255,255,255,0.75);
-  padding: 16px;
+#where {
+  .box, h3 {
+    position: relative;
+    z-index: 1;
+  }
+  .box {
+    background: rgba(255,255,255,0.75);
+    padding: 16px;
+  }
 }
 
 #bios {
