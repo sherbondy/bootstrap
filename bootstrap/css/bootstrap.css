@@ -6628,7 +6628,6 @@ h2 #radius {
 #where h3 {
   position: relative;
   z-index: 1;
-  display: block;
 }
 
 #where .box {
@@ -6642,7 +6641,7 @@ h2 #radius {
 
 #slogan {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   margin: 132px 0 16px 16px;
   line-height: 1.25;
   color: #fff;
