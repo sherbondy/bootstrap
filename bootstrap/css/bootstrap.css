@@ -6657,6 +6657,10 @@ h2 #radius {
   height: 551.25px;
 }
 
+.carousel {
+  text-shadow: none;
+}
+
 .carousel .item {
   background: #000;
 }
