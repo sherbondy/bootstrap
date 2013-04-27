@@ -41,10 +41,30 @@
 @linkColor:             #08c;
 @linkColorHover:        darken(@linkColor, 15%);
 
+.neo-sans(@weight, @style, @url, @fmt: 'otf') {
+  @font-face {
+    font-family: 'Neo Sans';
+    font-weight: @weight;
+    font-style: @style;
+    src: url('/font/@{url}.@{fmt}');
+  }
+}
+
+
+.neo-sans(light, normal, 'NeoSans-Light');
+.neo-sans(light, italic, 'NeoSans-LightItalic');
+.neo-sans(normal, normal, 'NeoSans');
+.neo-sans(normal, italic, 'NeoSans');
+.neo-sans(700, normal, 'NeoSans-Medium');
+.neo-sans(700, italic, 'NeoSans-MediumItalic');
+.neo-sans(bold, normal, 'NeoSans-Bold');
+.neo-sans(bold, italic, 'NeoSans-BoldItalic');
+.neo-sans(bolder, normal, 'NeoSans-Black');
+.neo-sans(bolder, italic, 'NeoSans-BlackItalic');
 
 // Typography
 // -------------------------
-@sansFontFamily:        Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@sansFontFamily:        "Neo Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
@@ -53,7 +73,7 @@
 @baseLineHeight:        24px;
 @altFontFamily:         @serifFontFamily;
 
-@headingsFontFamily:    Signika, "Gill Sans", Verdana, sans-serif; // empty to use BS default, @baseFontFamily
+@headingsFontFamily:    "Neo Sans", "Gill Sans", Verdana, sans-serif; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    bold;    // instead of browser default, bold
 @headingsColor:         inherit; // empty to use BS default, @textColor
 

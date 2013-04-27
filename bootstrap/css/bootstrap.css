@@ -8,6 +8,76 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: normal;
+  font-weight: light;
+  src: url('/font/NeoSans-Light.otf');
+}
+
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: italic;
+  font-weight: light;
+  src: url('/font/NeoSans-LightItalic.otf');
+}
+
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/font/NeoSans.otf');
+}
+
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: italic;
+  font-weight: normal;
+  src: url('/font/NeoSans.otf');
+}
+
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/font/NeoSans-Medium.otf');
+}
+
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: url('/font/NeoSans-MediumItalic.otf');
+}
+
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/font/NeoSans-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: italic;
+  font-weight: bold;
+  src: url('/font/NeoSans-BoldItalic.otf');
+}
+
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: normal;
+  font-weight: bolder;
+  src: url('/font/NeoSans-Black.otf');
+}
+
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: italic;
+  font-weight: bolder;
+  src: url('/font/NeoSans-BlackItalic.otf');
+}
+
 .clearfix {
   *zoom: 1;
 }
@@ -223,7 +293,7 @@ textarea {
 
 body {
   margin: 0;
-  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Neo Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: #333333;
@@ -739,7 +809,7 @@ h4,
 h5,
 h6 {
   margin: 12px 0;
-  font-family: Signika, "Gill Sans", Verdana, sans-serif;
+  font-family: "Neo Sans", "Gill Sans", Verdana, sans-serif;
   font-weight: bold;
   line-height: 24px;
   color: inherit;
@@ -1065,7 +1135,7 @@ input,
 button,
 select,
 textarea {
-  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Neo Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 label {
@@ -1740,8 +1810,8 @@ select:focus:invalid:focus {
 
 .input-append .active,
 .input-prepend .active {
-  background-color: #a9dba9;
-  border-color: #46a546;
+  background-color: #c3ef86;
+  border-color: #7cc21a;
 }
 
 .input-prepend .add-on,
@@ -4510,7 +4580,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-search .search-query {
   padding: 4px 14px;
   margin-bottom: 0;
-  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Neo Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
@@ -6205,242 +6275,8 @@ a.badge:focus {
   border-color: crimson;
 }
 
-body,
-#who {
-  background: #1D7A20;
-}
-
-.offset0,
-.row-fluid .offset0,
-.row .offset0 {
-  margin-left: 0;
-}
-
-.hidden {
-  display: none;
-}
-
-.time {
-  font-weight: bold;
-}
-
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 320px;
-  background-color: #b4c8f0;
-}
-
-header #logo,
-header #logo canvas {
-  position: absolute;
-  width: 232px;
-  height: 128px;
-}
-
-header #logo {
-  top: 16px;
-  left: 16px;
-  z-index: 2;
-}
-
-header #logo h1 {
-  position: absolute;
-  z-index: 2;
-  width: 200px;
-  height: 96px;
-  margin: 16px;
-  text-indent: -9999px;
-  background: url('/img/logo.png') no-repeat;
-}
-
-header #logo canvas {
-  z-index: 1;
-}
-
-.navbar {
-  background: none;
-}
-
-#navigation ul {
-  position: fixed;
-  top: 16px;
-  right: 16px;
-  z-index: 3;
-  list-style: none;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 16px;
-}
-
-#navigation ul li {
-  display: block;
-}
-
-#navigation ul li a {
-  display: block;
-  width: 96px;
-  padding: 8px 16px;
-  font-weight: bold;
-  color: #346ad6;
-  text-decoration: none;
-  border: none;
-}
-
-#navigation ul li a:hover {
-  color: #1c4089;
-  background: #efefef;
-}
-
-#navigation ul li a:active {
-  top: 1px;
-}
-
-#navigation ul li:first-child a {
-  border-radius: 16px 16px 0 0;
-}
-
-#navigation ul li:last-child a {
-  border-radius: 0 0 16px 16px;
-}
-
-#canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background-color: rgba(255, 255, 255, 0);
-}
-
-#content {
-  margin-top: 320px;
-  background: rgba(0, 100, 0, 0.85);
-}
-
-#content h3 em {
-  font-style: normal;
-  color: #333;
-  text-shadow: 0px 1px 0px #fff;
-}
-
-#content #who,
-#content #what,
-#content #when,
-#content #where,
-#content #why,
-#content #how {
-  overflow: hidden;
-}
-
-#content #who .content,
-#content #what .content,
-#content #when .content,
-#content #where .content,
-#content #why .content,
-#content #how .content {
-  max-width: 980px;
-  padding: 0 20px 20px 20px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-#content #who .content p a,
-#content #what .content p a,
-#content #when .content p a,
-#content #where .content p a,
-#content #why .content p a,
-#content #how .content p a {
-  position: relative;
-  padding: 2px 4px;
-  margin: 0 2px;
-  color: #000;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #fff;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
-}
-
-#content #who .content p a:hover,
-#content #what .content p a:hover,
-#content #when .content p a:hover,
-#content #where .content p a:hover,
-#content #why .content p a:hover,
-#content #how .content p a:hover {
-  background: #fff;
-}
-
-#content #who .content p a:active,
-#content #what .content p a:active,
-#content #when .content p a:active,
-#content #where .content p a:active,
-#content #why .content p a:active,
-#content #how .content p a:active {
-  top: 1px;
-}
-
-#content #who,
-#content #when,
-#content #why {
-  color: #fff;
-  text-shadow: 0px 1px 0px #000;
-}
-
-#content #who h3 em,
-#content #when h3 em,
-#content #why h3 em {
-  color: #ccc;
-  text-shadow: 0px 1px 0px #000;
-}
-
-#content #what,
-#content #where,
-#content #how {
-  color: #000;
-  text-shadow: 0px 1px 0px #fff;
-}
-
-#content #what .content p a,
-#content #where .content p a,
-#content #how .content p a {
-  color: #4a7adb;
-}
-
-#content #what .content p a:hover,
-#content #where .content p a:hover,
-#content #how .content p a:hover {
-  color: #1c4089;
-}
-
-#content #who h4 small {
-  display: block;
-  margin-top: 4px;
-  color: #efefef;
-}
-
-#content #what {
-  background: #ffffff url('/img/grey.png') repeat;
-}
-
-#content #when {
-  background: rgba(160, 0, 0, 0.85);
-}
-
-#content #where {
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  height: 320px;
-  background: none;
-}
-
-#content #why {
-  margin-top: 320px;
-  background: #1c4089;
-}
-
-#content #how {
-  background: url('/img/concrete_wall_3.png') repeat;
+body {
+  background: url('/img/site_mockup.jpg') top center no-repeat;
 }
 
 #team {
@@ -6492,160 +6328,17 @@ header #logo canvas {
   opacity: 0.5;
 }
 
-#bike {
-  display: block;
-  margin: 0 auto;
-  clear: both;
-}
-
-div.month {
-  margin-bottom: 20px;
-}
-
-div.month table.calendar {
-  display: block;
-  margin: 0;
-  font-size: 18px;
-  color: #000;
-  text-shadow: none;
-}
-
-div.month table.calendar thead {
-  font-weight: bold;
-}
-
-div.month table.calendar thead tr {
-  background: #c8c8c8;
-}
-
-div.month table.calendar tr {
-  background: #fff;
-}
-
-div.month table.calendar td {
-  width: 14.285714285714286%;
-  height: 32px;
-  text-align: center;
-  border: 1px solid #ccc;
-}
-
-div.month table.calendar td.trip {
-  background: rgba(0, 100, 0, 0.5);
-}
-
 #map {
   position: absolute;
   top: 0;
   left: 0;
+  display: none;
   width: 100%;
   height: 320px;
-}
-
-#trails,
-#symbols {
-  position: absolute;
-  top: 16px;
-  width: 180px;
-  padding: 8px;
-  background: rgba(255, 255, 255, 0.5);
-}
-
-#trails .toggle,
-#symbols .toggle {
-  position: relative;
-  display: block;
-  padding: 4px 8px;
-  color: #000;
-  text-align: center;
-  text-decoration: none;
-  background: #fff;
-}
-
-#trails .toggle:hover,
-#symbols .toggle:hover {
-  color: #fff;
-  background: #000;
-}
-
-#trails .toggle:active,
-#symbols .toggle:active {
-  top: 1px;
-}
-
-#trails > div,
-#symbols > div {
-  overflow: hidden;
-}
-
-#trails > div:hover,
-#symbols > div:hover {
-  background: #fff;
-}
-
-#trails > div input,
-#symbols > div input,
-#trails > div label,
-#symbols > div label,
-#trails > div a,
-#symbols > div a {
-  padding: 4px;
-}
-
-#trails > div input[type="checkbox"],
-#symbols > div input[type="checkbox"] {
-  float: right;
-  margin: 10px 8px 0 0;
-}
-
-#trails > div label,
-#symbols > div label {
-  float: left;
-  width: 140px;
-}
-
-#trails {
-  left: 16px;
-}
-
-#symbols {
-  right: 16px;
-}
-
-h2 #radius {
-  width: 2em;
-  font-family: mono;
-  font-size: inherit;
-  text-align: center;
-}
-
-.map {
-  position: absolute;
-  width: 100%;
-  height: 320px;
-}
-
-#where .box,
-#where h3 {
-  position: relative;
-  z-index: 1;
-}
-
-#where .box {
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.75);
 }
 
 #bios p {
   clear: both;
-}
-
-#slogan {
-  position: absolute;
-  z-index: 2;
-  margin: 132px 0 16px 16px;
-  line-height: 1.25;
-  color: #fff;
-  text-shadow: 0px 1px 4px #000;
 }
 
 #courses {
@@ -6683,4 +6376,136 @@ h2 #radius {
   margin-left: -320px;
   border: none;
   box-shadow: 0px 0px 16px #000;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+#title {
+  height: 780px;
+  overflow: hidden;
+  background: url('/img/spread/title.jpg') top center no-repeat #529bd2;
+}
+
+#header {
+  height: 160px;
+  margin-top: 300px;
+  color: #fff;
+  background: #7cc21a;
+}
+
+#header .center {
+  width: 900px;
+  padding-top: 36px;
+  overflow: hidden;
+}
+
+#header h1 {
+  float: left;
+  font-size: 82px;
+  font-weight: bolder;
+  line-height: 1;
+}
+
+#header #logo {
+  position: absolute;
+  left: 50%;
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: -72px 0 0 -150px;
+}
+
+#header #slogan {
+  float: right;
+  width: 254px;
+  font-size: 26px;
+  line-height: 1;
+}
+
+#what {
+  padding: 110px 0;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #fff;
+  background: #7cc21a;
+}
+
+#what .center {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#video {
+  height: 1000px;
+}
+
+#video #play {
+  display: block;
+  width: 240px;
+  height: 240px;
+  margin-top: 330px;
+  background: url('/img/video_playbutton.png') no-repeat;
+  opacity: 0.75;
+}
+
+#video #play:hover {
+  opacity: 1;
+}
+
+#social {
+  position: fixed;
+  top: 24px;
+  right: 32px;
+}
+
+#social li {
+  float: left;
+  margin-left: 8px;
+}
+
+#social li,
+#social li a {
+  display: block;
+  width: 32px;
+  height: 34px;
+}
+
+#social li a {
+  background-repeat: no-repeat;
+}
+
+#social .facebook a {
+  background-image: url('/img/social/yellow/Facebook.png');
+}
+
+#social .facebook a:hover {
+  background-image: url('/img/social/white/Facebook.png');
+}
+
+#social .blog a {
+  background-image: url('/img/social/yellow/Tumblr.png');
+}
+
+#social .blog a:hover {
+  background-image: url('/img/social/white/Tumblr.png');
+}
+
+#social .twitter a {
+  background-image: url('/img/social/yellow/Twitter.png');
+}
+
+#social .twitter a:hover {
+  background-image: url('/img/social/white/Twitter.png');
+}
+
+#social .vimeo a {
+  background-image: url('/img/social/yellow/Vimeo.png');
+}
+
+#social .vimeo a:hover {
+  background-image: url('/img/social/white/Vimeo.png');
 }

@@ -8,6 +8,76 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: normal;
+  font-weight: light;
+  src: url('/font/NeoSans-Light.otf');
+}
+
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: italic;
+  font-weight: light;
+  src: url('/font/NeoSans-LightItalic.otf');
+}
+
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/font/NeoSans.otf');
+}
+
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: italic;
+  font-weight: normal;
+  src: url('/font/NeoSans.otf');
+}
+
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/font/NeoSans-Medium.otf');
+}
+
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: url('/font/NeoSans-MediumItalic.otf');
+}
+
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/font/NeoSans-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: italic;
+  font-weight: bold;
+  src: url('/font/NeoSans-BoldItalic.otf');
+}
+
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: normal;
+  font-weight: bolder;
+  src: url('/font/NeoSans-Black.otf');
+}
+
+@font-face {
+  font-family: 'Neo Sans';
+  font-style: italic;
+  font-weight: bolder;
+  src: url('/font/NeoSans-BlackItalic.otf');
+}
+
 .clearfix {
   *zoom: 1;
 }

@@ -81,209 +81,8 @@
 
 //@import "cloud";
 
-body, #who {
-    background: #1D7A20;
-}
-
-.offset0, .row-fluid .offset0, .row .offset0 {
-    margin-left: 0px;
-}
-.hidden {
-    display: none;
-}
-.time {
-    font-weight: bold;
-}
-
-@header-height: 320px;
-@sky-blue: rgb(180,200,240);
-@map-height: 320px;
-
-header {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width:100%;
-    height: @header-height;
-    background-color: @sky-blue;
-
-    @h1-width: 200px;
-    @h1-height: 96px;
-
-    #logo, #logo canvas {
-        position: absolute;
-        width: @h1-width + 16*2px;
-        height: @h1-height + 16*2px;
-    }
-    
-    #logo {
-        z-index: 2;
-        top: 16px;
-        left: 16px;
-
-        h1 {
-            position: absolute;
-            z-index: 2;
-            width: @h1-width;
-            height: @h1-height;
-            margin: 16px;
-            text-indent: -9999px;
-            background: url('/img/logo.png') no-repeat;
-        }
-
-        canvas {
-            z-index: 1;
-        }
-    }
-}
-
-@nav-border-rad: 16px;
-
-.navbar {
-  background: none;
-}
-
-#navigation {
-  ul {
-    position: fixed;
-    z-index: 3;
-    top: 16px;
-    right: 16px;
-    list-style: none;
-    background: rgba(255,255,255,0.85);
-    border-radius: @nav-border-rad;
-    
-    li {
-      display: block;
-      
-      a {
-        display: block;
-        width: 96px;
-        padding: 8px 16px;
-        color: darken(@sky-blue, 30);
-        font-weight: bold;
-        text-decoration: none;
-        border: none;
-        
-        &:hover {
-          color: darken(@sky-blue, 50);
-          background: #efefef;
-        }
-      
-        &:active {
-          top: 1px;
-        }
-      }
-      
-      &:first-child a {
-        border-radius: @nav-border-rad @nav-border-rad 0 0;
-      }
-      
-      &:last-child a {
-        border-radius: 0 0 @nav-border-rad @nav-border-rad;
-      }
-    }
-  }
-}
-
-
-#canvas {
-    position: absolute;
-    z-index: 1;
-    top: 0px;
-    left: 0px;
-    background-color: rgba(255,255,255,0);
-}
-
-#content {
-  margin-top: @header-height;
-  background: rgba(0, 100, 0, 0.85);
-
-  h3 {
-    & em {
-      font-style: normal;
-      color: #333;
-      text-shadow: 0px 1px 0px #fff;
-    }
-  }
-
-  #who, #what, #when, #where, #why, #how {
-    overflow: hidden;
-
-    .content {
-      max-width: 980px;
-      margin: 0 auto;
-      overflow: hidden;
-      padding: 0 20px 20px 20px;
-  
-      p a {
-        position: relative;
-        color: #000;
-        background: rgba(255,255,255,0.5);
-        border-radius: 8px;
-        padding: 2px 4px;
-        margin: 0px 2px;
-        text-shadow: 0px 1px 0px #fff;
-        text-decoration: none;
-        
-        &:hover {
-          background: #fff;
-        }
-        &:active {
-          top: 1px;
-        }
-      }
-    }
-  }
-  #who, #when, #why {
-    color: #fff;
-    text-shadow: 0px 1px 0px #000;
-    h3 em {
-      color: #ccc;
-      text-shadow: 0px 1px 0px #000;
-    }
-  }
-  #what, #where, #how {
-    color: #000;
-    text-shadow: 0px 1px 0px #fff;
-    
-    .content p a {
-      color: darken(@sky-blue, 25%);
-      &:hover {
-        color: darken(@sky-blue, 50%);
-      }
-    }
-  }
-
-  #who {
-    h4 small {
-      display: block;
-      margin-top: 4px;
-      color: #efefef;
-    }
-  }
-  #what {
-    background: #fff url('/img/grey.png') repeat;
-  }
-  #when {
-    background: rgba(160, 0, 0, 0.85);
-  }
-  
-  #where {
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    height: @map-height;
-    background: none;
-  }
-  
-  #why {
-    margin-top: @map-height;
-    background: darken(@sky-blue, 50%);
-  }
-  #how {
-    background: url('/img/concrete_wall_3.png') repeat;
-  }
+body {
+  background: url('/img/site_mockup.jpg') top center no-repeat;
 }
 
 @box-length: (@grid-width/9);
@@ -335,52 +134,11 @@ header {
   }
 }
 
-#bike {
-  display: block;
-  clear: both;
-  margin: 0px auto;
-}
-
-div.month {
-  margin-bottom: 20px;
-
-  table.calendar {
-    display: block;
-    margin: 0px;
-    color: #000;
-    text-shadow: none;
-    font-size: 18px;
-
-    thead {
-      font-weight: bold;
-      tr {
-        background: rgb(200,200,200);
-      }
-    }
-    
-    tr {
-      background: #fff;
-    }
-    
-    td {
-      text-align: center;
-      width: (100%/7);
-      height: 32px;
-      border: 1px solid #ccc;
-
-      &.trip {
-        background: rgba(0, 100, 0, 0.5);
-      }
-    }
-  }
-}
-
-
-
 
 // The Map
 
 #map {
+  display: none;
   position: absolute;
   width: 100%;
   height: 320px;
@@ -388,100 +146,11 @@ div.month {
   left: 0px;
 }
 
-#trails, #symbols {
-  position: absolute;
-  top: 16px;
-  width: 180px;
-  background: rgba(255,255,255,0.5);
-  padding: 8px;
-
-  .toggle {
-    display: block;
-    position: relative;
-    background: #fff;
-    color: #000;
-    text-decoration: none;
-    padding: 4px 8px;
-    text-align: center;
-
-    &:hover {
-      background: #000;
-      color: #fff;
-    }
-    &:active {
-      top: 1px;
-    }
-  }
-
-  & > div {
-    overflow: hidden;
-
-    &:hover {
-      background: #fff;
-    }
-    
-    input, label, a {
-      padding: 4px;
-    }
-
-    input[type="checkbox"] {
-      margin: 10px 8px 0 0;
-      float: right;
-    }
-
-    label {
-      float: left;
-      width: 140px;
-    }
-  }
-}
-
-#trails {
-  left: 16px;
-}
-
-#symbols {
-  right: 16px;
-}
-
-h2 #radius {
-  font-size: inherit;
-  font-family: mono;
-  width: 2em;
-  text-align: center;
-}
-
-.map {
-  width: 100%;
-  height: @map-height;
-  position: absolute;
-}
-
-#where {
-  .box, h3 {
-    position: relative;
-    z-index: 1;
-  }
-  .box {
-    background: rgba(255,255,255,0.75);
-    padding: 16px;
-  }
-}
-
 #bios {
   
   p {
     clear: both;
   }
-}
-
-#slogan {
-  position: absolute;
-  z-index: 2;
-	margin: 132px 0 16px 16px;
-  line-height: 1.25;
-  color: #fff;
-  text-shadow: 0px 1px 4px #000;
 }
 
 #courses {
@@ -519,4 +188,127 @@ h2 #radius {
   height: 100%;
   border: none;
   box-shadow: 0px 0px 16px #000;
+}
+
+
+@green: #7cc21a;
+@yellow: #f9bf49;
+
+.center {
+  margin: 0 auto;
+}
+
+#title {
+  overflow: hidden;
+  background: url('/img/spread/title.jpg') top center no-repeat #529bd2;
+  height: 780px;
+}
+
+#header {
+  margin-top: 300px;
+  background: @green;
+  height: 160px;
+  //opacity:0.5;
+  color: #fff;
+  
+  .center {
+    width: 900px;
+    padding-top: 36px;
+    overflow: hidden;
+  }
+  
+  h1 {
+    line-height: 1;
+    font-size: 82px;
+    font-weight: bolder;
+    float: left;
+  }
+  
+  #logo {
+    display: block;
+    position: absolute;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    margin: -72px 0 0 -150px;
+  }
+  
+  #slogan {
+    font-size: 26px;
+    width: 254px;
+    line-height: 1;
+    float: right;
+  }
+}
+
+#what {
+  background: @green;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  color: #fff;
+  line-height: 1.2;
+  padding: 110px 0;
+  
+  .center {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+
+#video {
+  //background: url('/img/spread/video.png') center top no-repeat;
+  height: 1000px;
+  
+  #play {
+    display: block;
+    width: 240px;
+    height: 240px;
+    margin-top: 330px;
+    opacity: 0.75;
+    background: url('/img/video_playbutton.png') no-repeat;
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.social-hover(@img-name){
+  background-image: url('/img/social/yellow/@{img-name}.png');
+  &:hover {
+    background-image: url('/img/social/white/@{img-name}.png');
+  }
+}
+
+#social {
+  position: fixed;
+  top: 24px;
+  right: 32px;
+  
+  li {
+    margin-left: 8px;
+    float: left;
+  }
+  li, li a {
+    display: block;
+    width: 32px;
+    height: 34px;
+  }
+  li a {
+    background-repeat: no-repeat;
+  }
+  
+  .facebook a {
+    .social-hover('Facebook')
+  }
+  .blog a {
+    .social-hover('Tumblr')
+  }
+  .twitter a {
+    .social-hover('Twitter')
+  }
+  .vimeo a {
+    .social-hover('Vimeo')
+  }
 }
