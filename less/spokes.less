@@ -78,11 +78,13 @@
   }
 }
 
+//
+// SPOKES STYLES GO HERE
+//
 
-//@import "cloud";
-
-body {
-}
+@green: #7cc21a;
+@yellow: #f9bf49;
+@blue: #529bd2;
 
 @box-length: (@grid-width/9);
 
@@ -221,10 +223,6 @@ body {
 }
 
 
-@green: #7cc21a;
-@yellow: #f9bf49;
-@blue: #529bd2;
-
 a {
   position: relative;
   color: @blue;
@@ -240,11 +238,12 @@ a {
 #title {
   overflow: hidden;
   background: url('/img/spread/title.jpg') top center no-repeat @blue;
-  height: 780px;
+  background-size: cover;
+  height: 760px;
 }
 
 #header {
-  margin-top: 300px;
+  margin-top: 240px;
   background: @green;
   height: 160px;
   //opacity:0.5;
@@ -296,7 +295,8 @@ a {
 }
 
 #video {
-  background: url('/img/spread/video.png') top center no-repeat;
+  background: url('/img/spread/video.jpg') top center no-repeat;
+  background-size: cover;
   height: 1000px;
   overflow: hidden;
   color: @yellow;
@@ -354,7 +354,8 @@ a {
 }
 
 #why {
-  background: url('/img/spread/mission.png') top center no-repeat;
+  background: url('/img/spread/mission.jpg') top center no-repeat;
+  background-size: cover;
   padding: 256px 0;
   
   p {
@@ -377,7 +378,8 @@ a {
 
 #help {
   padding: 128px 0;
-  background: url('/img/spread/help.png') center top no-repeat;
+  background: url('/img/spread/help.jpg') center top no-repeat;
+  background-size: cover;
   
   #explain-social {
     position: absolute;

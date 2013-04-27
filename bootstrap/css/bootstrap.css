@@ -6423,14 +6423,15 @@ a:hover {
 }
 
 #title {
-  height: 780px;
+  height: 760px;
   overflow: hidden;
   background: url('/img/spread/title.jpg') top center no-repeat #529bd2;
+  background-size: cover;
 }
 
 #header {
   height: 160px;
-  margin-top: 300px;
+  margin-top: 240px;
   color: #fff;
   background: #7cc21a;
 }
@@ -6484,7 +6485,8 @@ a:hover {
   overflow: hidden;
   color: #f9bf49;
   text-shadow: 0px 1px 0px #000;
-  background: url('/img/spread/video.png') top center no-repeat;
+  background: url('/img/spread/video.jpg') top center no-repeat;
+  background-size: cover;
 }
 
 #video #play {
@@ -6547,7 +6549,8 @@ a:hover {
 
 #why {
   padding: 256px 0;
-  background: url('/img/spread/mission.png') top center no-repeat;
+  background: url('/img/spread/mission.jpg') top center no-repeat;
+  background-size: cover;
 }
 
 #why p {
@@ -6569,7 +6572,8 @@ a:hover {
 
 #help {
   padding: 128px 0;
-  background: url('/img/spread/help.png') center top no-repeat;
+  background: url('/img/spread/help.jpg') center top no-repeat;
+  background-size: cover;
 }
 
 #help #explain-social {
