@@ -6275,10 +6275,6 @@ a.badge:focus {
   border-color: crimson;
 }
 
-body {
-  background: url('/img/site_mockup.jpg') top center no-repeat;
-}
-
 #team {
   max-width: 640px;
   margin: 0;
@@ -6514,20 +6510,6 @@ a:hover {
   background: url('/img/video_arrow.png') left no-repeat;
 }
 
-#fixed-title {
-  position: fixed;
-  top: 16px;
-  left: 64px;
-  z-index: 2;
-  margin: 0;
-  font-size: 36px;
-  color: #fff;
-}
-
-#fixed-title .logo {
-  margin-right: 12px;
-}
-
 .righty {
   max-width: 960px;
   padding-left: 240px;
@@ -6625,11 +6607,35 @@ a:hover {
   color: #fce2ac;
 }
 
-#social {
+#fixed {
   position: fixed;
-  top: 24px;
-  right: 32px;
+  top: 16px;
   z-index: 2;
+  display: block;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+}
+
+#fixed.visible {
+  opacity: 1;
+}
+
+#fixed-title {
+  left: 64px;
+  margin: 0 0 0 64px;
+  font-size: 36px;
+  color: #fff;
+}
+
+#fixed-title .logo {
+  margin-right: 12px;
+}
+
+#social {
+  z-index: 2;
+  float: right;
+  margin: 16px 32px 0 0;
 }
 
 #social li {
