@@ -37,11 +37,11 @@
     border-width: 0 1px;
     margin-right: @h-margin;
   }
-  
+
   div.vert.first-line {
     margin-left: @h-margin;
   }
-  
+
   /**
    * Horizontal grid lines, defined by your base line height
    *
@@ -55,11 +55,11 @@
     margin: 0;
     padding: 0;
   }
-  
+
   /**
   * Classes for multiple grids
   *
-  * When using more than one grid, remember to set the numberOfGrids 
+  * When using more than one grid, remember to set the numberOfGrids
   * option in the hashgrid.js file.
   */
   &.grid-1 div.vert {
@@ -70,7 +70,7 @@
     /* Adjustments */
     padding: 0 160px;
     width: 660px;
-  
+
     div.vert{
         /* Vertical grid line colour for grid 2 */
         border-color: crimson;
@@ -99,7 +99,7 @@
     background: #7d6026;
     margin: 0 10px 10px 0;
   }
-  
+
   li, li > a, li > a img {
     display: block;
     float: left;
@@ -109,14 +109,14 @@
   li > a {
     &:hover, &.active {
       text-decoration: none;
-      
+
       h5 {
         display: block;
         background: #fff;
         color: #000;
         text-shadow: none;
       }
-      
+
       img {
         opacity: 1.0;
       }
@@ -141,11 +141,11 @@
 #where {
   color: #fff;
   text-shadow: 0px 1px 0px #000;
-  
+
   #map {
     height: 800px;
   }
-  
+
   #countdown {
     position: absolute;
     text-align: center;
@@ -157,7 +157,7 @@
     height: 128px;
     border-radius: 64px;
     border: 4px solid @yellow;
-    
+
     #days-left {
       font-size: 48px;
       margin: 32px 0 -16px;
@@ -166,7 +166,7 @@
       font-size: 16px;
     }
   }
-  
+
   .box {
     font-weight: bold;
     position: absolute;
@@ -183,7 +183,7 @@
 
 #courses {
   color: #fff;
-  
+
   .carousel .item .image {
     max-width: @grid-width;
     height: (@grid-width * (9/16));
@@ -192,18 +192,18 @@
 
 .carousel {
   text-shadow: none;
-  
+
   .carousel-control {
     line-height: 0.8;
   }
 
   .item {
     background: #000;
-    
+
     .carousel-caption {
       background: rgba(0,0,0,0.9);
     }
-    
+
     .image {
       margin: 0 auto;
     }
@@ -225,9 +225,9 @@
 
 a {
   position: relative;
-  color: @blue;
+  color: lighten(@blue, 20%);
   &:hover {
-    color: lighten(@blue, 20%);
+    color: lighten(@blue, 40%);
   }
 }
 
@@ -248,20 +248,20 @@ a {
   height: 160px;
   //opacity:0.5;
   color: #fff;
-  
+
   .center {
     max-width: 900px;
     padding-top: 36px;
     overflow: hidden;
   }
-  
+
   h1 {
     line-height: 1;
     font-size: 82px;
     font-weight: bolder;
     float: left;
   }
-  
+
   #logo {
     display: block;
     position: absolute;
@@ -270,7 +270,7 @@ a {
     height: 300px;
     margin: -72px 0 0 -150px;
   }
-  
+
   #slogan {
     font-size: 26px;
     width: 254px;
@@ -287,7 +287,7 @@ a {
   color: #fff;
   line-height: 1.2;
   padding: 110px 0;
-  
+
   .center {
     max-width: 960px;
     margin: 0 auto;
@@ -301,7 +301,7 @@ a {
   overflow: hidden;
   color: @yellow;
   text-shadow: 0px 1px 0px #000;
-  
+
   #play {
     display: block;
     width: 240px;
@@ -309,12 +309,12 @@ a {
     margin-top: 330px;
     opacity: 0.75;
     background: url('/img/video_playbutton.png') no-repeat;
-    
+
     &:hover {
       opacity: 1;
     }
   }
-  
+
   .explanation {
     background: url('/img/video_arrow.png') left no-repeat;
     font-size: 20px;
@@ -330,23 +330,23 @@ a {
   max-width: 960px;
   margin: 0 auto;
   padding-left: 240px;
-  
+
   h2 {
     text-transform: uppercase;
     font-size: 48px;
-  }  
+  }
 }
 
 #classes, #who {
   background: @green;
   padding: 128px 0;
-  color: #fff;  
+  color: #fff;
 }
 
 #why, #who, #help {
   color: #fff;
   line-height: 1.2;
-  
+
   h3, .righty p {
     max-width: 800px;
     font-weight: bold;
@@ -357,7 +357,7 @@ a {
   background: url('/img/spread/mission.jpg') top center no-repeat;
   background-size: cover;
   padding: 256px 0;
-  
+
   p {
     font-size: 24px;
   }
@@ -365,10 +365,10 @@ a {
 
 #who {
   font-weight: bold;
-  
+
   h3 {
     text-transform: uppercase;
-    
+
     small {
       color: #fff;
       padding: 12px 0;
@@ -380,7 +380,7 @@ a {
   padding: 128px 0;
   background: url('/img/spread/help.jpg') center top no-repeat;
   background-size: cover;
-  
+
   #explain-social {
     position: absolute;
     right: 96px;
@@ -392,21 +392,21 @@ a {
       font-size: 18px;
     }
   }
-  
+
   h2 em {
     font-style: normal;
     text-transform: none;
   }
-  
+
   #logo-bottom {
     display: block;
     margin: 256px auto 128px;
   }
-  
+
   p {
     font-size: 26px;
   }
-  
+
   a {
     color: @yellow;
     &:hover {
@@ -426,7 +426,7 @@ a {
   top: 16px;
   opacity: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
-  
+
   &.visible {
     opacity: 1;
   }
@@ -444,7 +444,7 @@ a {
   color: #fff;
   font-size: 36px;
   margin: 0 0 0 64px;
-  
+
   .logo {
     margin-right: 12px;
   }
@@ -455,7 +455,7 @@ a {
   float: right;
   margin: 16px 32px 0 0;
   z-index: 2;
-  
+
   li {
     margin-left: 8px;
     float: left;
@@ -468,7 +468,7 @@ a {
   li a {
     background-repeat: no-repeat;
   }
-  
+
   .facebook a {
     .social-hover('Facebook')
   }

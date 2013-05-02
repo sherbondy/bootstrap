@@ -6411,11 +6411,11 @@ a.badge:focus {
 
 a {
   position: relative;
-  color: #529bd2;
+  color: #a3cae7;
 }
 
 a:hover {
-  color: #a3cae7;
+  color: #f4f9fc;
 }
 
 .center {
