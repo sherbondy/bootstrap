@@ -6275,6 +6275,10 @@ a.badge:focus {
   border-color: crimson;
 }
 
+body {
+  background: #7cc21a;
+}
+
 #team {
   max-width: 640px;
   margin: 0;
@@ -6688,4 +6692,35 @@ a:hover {
 
 #social .vimeo a:hover {
   background-image: url('/img/social/white/Vimeo.png');
+}
+
+#nav {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  z-index: 3;
+  width: 640px;
+  margin-left: -320px;
+  font-size: 24px;
+  font-weight: bold;
+  list-style: none;
+}
+
+#nav li {
+  float: left;
+  margin: 0 16px;
+}
+
+#nav li a {
+  position: relative;
+  color: #fff;
+  opacity: 0.75;
+}
+
+#nav li a:hover {
+  opacity: 1.0;
+}
+
+#nav li a:active {
+  top: 1px;
 }

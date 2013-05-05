@@ -88,6 +88,9 @@
 
 @box-length: (@grid-width/9);
 
+body {
+  background: @green;
+}
 
 #team {
   list-style: none;
@@ -480,5 +483,35 @@ a {
   }
   .vimeo a {
     .social-hover('Vimeo')
+  }
+}
+
+#nav {
+  position: absolute;
+  font-size: 24px;
+  width: 640px;
+  top: 32px;
+  left: 50%;
+  margin-left: -320px;
+  list-style: none;
+  font-weight: bold;
+  z-index: 3;
+
+  li {
+    float: left;
+    margin: 0px 16px;
+
+    a {
+      color: #fff;
+      opacity: 0.75;
+      position: relative;
+
+      &:hover {
+        opacity: 1.0;
+      }
+      &:active {
+        top: 1px;
+      }
+    }
   }
 }
