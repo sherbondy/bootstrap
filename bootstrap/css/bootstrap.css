@@ -6402,13 +6402,14 @@ body {
 }
 
 #app {
-  position: absolute;
+  position: fixed;
+  top: 0;
   left: 50%;
   z-index: 3;
   display: block;
   width: 640px;
   height: 100%;
-  margin-left: -320px;
+  margin: 0 0 0 -320px;
   border: none;
   box-shadow: 0px 0px 16px #000;
 }
@@ -6723,4 +6724,26 @@ a:hover {
 
 #nav li a:active {
   top: 1px;
+}
+
+#home {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 3;
+  display: block;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  background: url('/img/home.png') no-repeat center center #ffffff;
+  border-radius: 8px;
+  opacity: 0.5;
+}
+
+#home:hover {
+  opacity: 1;
+}
+
+#home:active {
+  top: 17px;
 }

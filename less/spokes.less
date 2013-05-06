@@ -214,12 +214,13 @@ body {
 }
 
 #app {
-  position: absolute;
+  position: fixed;
   z-index: 3;
   display: block;
   width: 640px;
   left: 50%;
-  margin-left: -320px;
+  margin: 0 0 0 -320px;
+  top: 0px;
   height: 100%;
   border: none;
   box-shadow: 0px 0px 16px #000;
@@ -513,5 +514,26 @@ a {
         top: 1px;
       }
     }
+  }
+}
+
+#home {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  background: url('/img/home.png') no-repeat center center #fff;
+  width: 32px;
+  height: 32px;
+  display: block;
+  opacity: 0.5;
+  z-index: 3;
+  text-indent: -9999px;
+  border-radius: 8px;
+
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    top: 17px;
   }
 }
