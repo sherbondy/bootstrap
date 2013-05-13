@@ -6466,8 +6466,9 @@ a:hover {
 #header #slogan {
   float: right;
   width: 254px;
-  font-size: 26px;
-  line-height: 1;
+  padding-top: 8px;
+  font-size: 24px;
+  line-height: 1.25;
 }
 
 #what {
@@ -6506,7 +6507,7 @@ a:hover {
   opacity: 1;
 }
 
-#video .explanation {
+#video #explanation {
   position: absolute;
   left: 50%;
   width: 280px;
@@ -6514,6 +6515,10 @@ a:hover {
   margin-left: -10px;
   font-size: 20px;
   background: url('/img/video_arrow.png') left no-repeat;
+}
+
+#video #explanation strong {
+  color: #7cc21a;
 }
 
 .righty {
@@ -6575,7 +6580,7 @@ a:hover {
 }
 
 #help {
-  padding: 128px 0;
+  padding: 64px 0;
   background: url('/img/spread/help.jpg') center top no-repeat;
   background-size: cover;
 }
@@ -6585,8 +6590,8 @@ a:hover {
   right: 96px;
   width: 320px;
   padding: 48px 48px 0 0;
-  color: #f9bf49;
-  text-shadow: none;
+  margin-top: 96px;
+  color: #fff;
   background: url('/img/follow_socialmedia_arrow.png') center right no-repeat;
 }
 
@@ -6601,11 +6606,11 @@ a:hover {
 
 #help #logo-bottom {
   display: block;
-  margin: 256px auto 128px;
+  margin: 128px auto 128px;
 }
 
 #help p {
-  font-size: 26px;
+  font-size: 24px;
 }
 
 #help a {
@@ -6710,6 +6715,7 @@ a:hover {
 #nav li {
   float: left;
   margin: 0 16px;
+  text-align: center;
 }
 
 #nav li a {
@@ -6723,6 +6729,31 @@ a:hover {
 }
 
 #nav li a:active {
+  top: 1px;
+}
+
+#sponsors {
+  padding: 64px 0;
+  overflow: hidden;
+  background: #fff;
+}
+
+#sponsors h2 {
+  color: #7cc21a;
+  text-transform: uppercase;
+}
+
+#sponsors a {
+  position: relative;
+  display: block;
+  margin-bottom: 64px;
+}
+
+#sponsors a:hover {
+  opacity: 0.75;
+}
+
+#sponsors a:active {
   top: 1px;
 }
 

@@ -276,9 +276,10 @@ a {
   }
 
   #slogan {
-    font-size: 26px;
+    font-size: 24px;
     width: 254px;
-    line-height: 1;
+    line-height: 1.25;
+    padding-top: 8px;
     float: right;
   }
 }
@@ -321,7 +322,7 @@ a {
     }
   }
 
-  .explanation {
+  #explanation {
     background: url('/img/video_arrow.png') left no-repeat;
     font-size: 20px;
     width: 280px;
@@ -329,6 +330,10 @@ a {
     left: 50%;
     margin-left: -10px;
     padding: 40px 0 0 330px;
+
+    strong {
+      color: @green;
+    }
   }
 }
 
@@ -383,7 +388,7 @@ a {
 }
 
 #help {
-  padding: 128px 0;
+  padding: 64px 0;
   background: url('/img/spread/help.jpg') center top no-repeat;
   background-size: cover;
 
@@ -391,10 +396,10 @@ a {
     position: absolute;
     right: 96px;
     width: 320px;
+    margin-top: 96px;
     padding: 48px 48px 0 0;
     background: url('/img/follow_socialmedia_arrow.png') center right no-repeat;
-    color: @yellow;
-    text-shadow: none;
+    color: #fff;
 
     p {
       font-size: 18px;
@@ -408,11 +413,11 @@ a {
 
   #logo-bottom {
     display: block;
-    margin: 256px auto 128px;
+    margin: 128px auto 128px;
   }
 
   p {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   a {
@@ -504,7 +509,8 @@ a {
 
   li {
     float: left;
-    margin: 0px 16px;
+    text-align: center;
+    margin: 0 16px;
 
     a {
       color: #fff;
@@ -517,6 +523,30 @@ a {
       &:active {
         top: 1px;
       }
+    }
+  }
+}
+
+#sponsors {
+  background: #fff;
+  padding: 64px 0;
+  overflow: hidden;
+  
+  h2 {
+    text-transform: uppercase;
+    color: @green;
+  }
+
+  a {
+    position: relative;
+    display: block;
+    margin-bottom: 64px;
+
+    &:hover {
+      opacity: 0.75;
+    }
+    &:active {
+      top: 1px;
     }
   }
 }
