@@ -6542,7 +6542,7 @@ a:hover {
 #why,
 #who,
 #help {
-  line-height: 1.2;
+  line-height: 1.25;
   color: #fff;
 }
 
@@ -6640,6 +6640,11 @@ a:hover {
   margin: 0 0 0 64px;
   font-size: 36px;
   color: #fff;
+}
+
+#fixed-title a {
+  color: #fff;
+  text-decoration: none;
 }
 
 #fixed-title .logo {
